@@ -1,0 +1,35 @@
+.gapTop {
+	margin-top: 10px;
+}
+
+.gapBottom {
+	margin-bottom: 10px;
+}
+
+#loginFormArea {
+	display: block;
+}
+
+.center {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+.welcomeTextCenter {
+	margin-top: 45%;
+	margin-bottom: 35%;
+	text-align: center;
+}
+
+#chatFormArea {
+	display: none;
+}
+
+.showTypingSignals {
+	display: block;
+}
+
+.hideTypingSignals {
+	display: none;
+}

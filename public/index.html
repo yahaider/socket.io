@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bulma/bulma.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Private Chat App</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="topNav">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="#">
+                    <img src="/img/logo.png" width="112" height="28">
+                    </a>
+
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                        More
+                        </a>
+
+                        <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            About
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div id="loginStatus">
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+        </div>
+
+        <div class="columns">
+
+                <div style="text-align: center;" id="usersArea" class="column is-4">
+                    <div class="buttons" id="onlineUsersList"></div>
+                </div>
+
+            <div class="column is-8">
+
+                <div style="text-align: center;">
+                    <h1 class="title">Chat App!</h1>
+                    <h2 class="subtitle">One to One - Private Messaging</h2>
+                    <hr>
+                </div>
+
+                <div id="loginFormArea">
+                    <form class="center" onsubmit="return getUserName();">
+                        <input id="userName" class="input is-medium is-rounded" type="text" placeholder="enter user name">
+                        <input class="button gapTop is-danger is-rounded is-fullwidth" type="submit" value="Login">
+                    </form>
+                </div>
+
+                <div id="welcomeMessage">
+                </div>
+                <div id="chats">
+                </div>
+
+                <div id="chatFormArea">
+                    <form onsubmit="return sendMessage();">
+                        <div id="typingSignals" class="hideTypingSignals"> <img src="/img/typingSignals.gif" alt="">  </div>
+                        <input id="message" class="gapTop input is-medium" placeholder="enter your messsage" type="text">
+                        <input class="button gapTop gapBottom is-success" type="submit" value="Send">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/socket.io/socket.io.js"></script>
+    <script src="/js/bulmaMenu.js"></script>
+    <script src="/client.js"></script>
+
+</body>
+</html>
